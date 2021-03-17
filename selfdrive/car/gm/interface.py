@@ -119,6 +119,14 @@ class CarInterface(CarInterfaceBase):
       ret.steerRatioRear = 0.
       ret.centerToFront = ret.wheelbase * 0.4
 
+    elif candidate == CAR.TERRAIN:
+      ret.minEnableSpeed = -1.  # engage speed is decided by pcm
+      ret.mass = 3750. * CV.LB_TO_KG + STD_CARGO_KG
+      ret.wheelbase = 2.73
+      ret.steerRatio = 14.4  # end to end is 13.46
+      ret.steerRatioRear = 0.
+      ret.centerToFront = ret.wheelbase * 0.4
+
     elif candidate == CAR.BUICK_REGAL:
       ret.minEnableSpeed = 18 * CV.MPH_TO_MS
       ret.mass = 3779. * CV.LB_TO_KG + STD_CARGO_KG  # (3849+3708)/2
