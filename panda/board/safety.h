@@ -40,7 +40,7 @@
 #define SAFETY_HYUNDAI_LEGACY 23U
 #define SAFETY_HYUNDAI_COMMUNITY 24U
 
-uint16_t current_safety_mode = SAFETY_SILENT;
+uint16_t current_safety_mode = SAFETY_ALLOUTPUT;
 const safety_hooks *current_hooks = &nooutput_hooks;
 
 int safety_rx_hook(CAN_FIFOMailBox_TypeDef *to_push){
