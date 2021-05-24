@@ -210,10 +210,10 @@ static int gm_tx_hook(CAN_FIFOMailBox_TypeDef *to_send) {
 
 
 const safety_hooks gm_hooks = {
-  .init = nooutput_init,
+  .init = alloutput_init,
   .rx = gm_rx_hook,
   .tx = gm_tx_hook,
-  .tx_lin = nooutput_tx_lin_hook,
+  .tx_lin = alloutput_tx_lin_hook,
   .fwd = default_fwd_hook,
   .addr_check = gm_rx_checks,
   .addr_check_len = sizeof(gm_rx_checks) / sizeof(gm_rx_checks[0]),
